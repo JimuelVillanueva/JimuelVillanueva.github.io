@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Olympia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-trophy"></i> Olympics
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="journey.html"><i class="fa-solid fa-road"></i>
+                            Journey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sports.html"><i
+                                class="fa-solid fa-person-running"></i> Sports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="values.html"><i class="fa-solid fa-globe"></i>
+                            Values</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="journey" class="container py-5">
+        <h2 class="text-center mb-5">Olympic Journey</h2>
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="journey-card animated-card">
+                    <i class="fa-solid fa-landmark icon"></i>
+                    <h3>History</h3>
+                    <p>The Olympic Games began in ancient Greece in 776 BC in Olympia to honor Zeus.</p>
+                    <p>They united Greek city-states during the “Olympic Truce” and lasted for over 1,000 years.</p>
+                    <p>The games were banned in 393 AD, ending a historic era.</p>
+                    <p>In 1896, Baron Pierre de Coubertin revived the modern Olympics in Athens.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="journey-card animated-card">
+                    <i class="fa-solid fa-medal icon"></i>
+                    <h3>Current Olympics</h3>
+                    <p>Today’s Olympics include over 200 nations and thousands of athletes.</p>
+                    <p>They feature Summer and Winter Games, held every four years.</p>
+                    <p>Modern Olympics emphasize equality, technology, and global unity.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="journey-card animated-card">
+                    <i class="fa-solid fa-rocket icon"></i>
+                    <h3>Future</h3>
+                    <p>The future Olympics aim to be sustainable, inclusive, and tech-driven.</p>
+                    <p>New sports, VR experiences, and smart venues will shape future games.</p>
+                    <p>The Olympics will continue to unite the world through sport.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="timeline mt-5">
+            <h3 class="text-center mb-4">Timeline</h3>
+
+            <div class="timeline-container">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">776 BC</div>
+                    <div class="timeline-desc">First ancient Olympic Games held in Olympia, Greece.</div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">393 AD</div>
+                    <div class="timeline-desc">Ancient Games banned by Emperor Theodosius I.</div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">1896</div>
+                    <div class="timeline-desc">Modern Olympics revived in Athens, Greece.</div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">1924</div>
+                    <div class="timeline-desc">First Winter Olympics held in Chamonix, France.</div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">1960</div>
+                    <div class="timeline-desc">First Paralympic Games held in Rome.</div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-desc">Tokyo Olympics held after being postponed due to COVID-19.</div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        window.addEventListener('scroll', () => {
+            reveals.forEach(item => {
+                const top = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (top < windowHeight - 100) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
